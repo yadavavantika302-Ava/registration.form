@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Registration Successful</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+
+        body {
+
+            min-height: 100vh;
+
+            background: linear-gradient(
+                135deg,
+                #667eea,
+                #764ba2
+            );
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+        }
+
+
+        .container {
+
+            width: 100%;
+
+            max-width: 700px;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+
+        .success {
+
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+
+        .success-icon {
+
+            width: 65px;
+
+            height: 65px;
+
+            margin: auto;
+
+            background: #22c55e;
+
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-size: 35px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .success h1 {
+
+            color: #4f46e5;
+
+            margin-bottom: 8px;
+        }
+
+
+        .success p {
+
+            color: #666;
+        }
+
+
+        .details {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+        }
+
+
+        .detail-box {
+
+            background: #f8fafc;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 10px;
+
+            padding: 15px;
+        }
+
+
+        .detail-box.full {
+
+            grid-column: 1 / -1;
+        }
+
+
+        .label {
+
+            font-size: 13px;
+
+            color: #6366f1;
+
+            font-weight: bold;
+
+            margin-bottom: 5px;
+        }
+
+
+        .value {
+
+            font-size: 15px;
+
+            color: #333;
+
+            word-break: break-word;
+        }
+
+
+        .back-btn {
+
+            display: block;
+
+            width: 180px;
+
+            margin: 30px auto 0;
+
+            padding: 12px;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-weight: bold;
+
+            border-radius: 10px;
+
+            background: linear-gradient(
+                135deg,
+                #6366f1,
+                #8b5cf6
+            );
+
+            transition: 0.3s;
+        }
+
+
+        .back-btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 8px 18px rgba(0, 0, 0, 0.2);
+        }
+
+
+        @media (max-width: 600px) {
+
+            .container {
+
+                padding: 25px 18px;
+            }
+
+
+            .details {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .detail-box.full {
+
+                grid-column: auto;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="container">
+
+
+        <!-- SUCCESS MESSAGE -->
+
+        <div class="success">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <h1>
+                Registration Successful!
+            </h1>
+
+            <p>
+                Your submitted information is shown below.
+            </p>
+
+        </div>
+
+
+        <!-- DATA -->
+
+        <div class="details">
+
+
+            <div class="detail-box">
+
+                <div class="label">
+                    First Name
+                </div>
+
+                <div class="value" id="firstname">
+                    -
+                </div>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <div class="label">
+                    Last Name
+                </div>
+
+                <div class="value" id="lastname">
+                    -
+                </div>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <div class="label">
+                    Username
+                </div>
+
+                <div class="value" id="username">
+                    -
+                </div>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <div class="label">
+                    Email
+                </div>
+
+                <div class="value" id="email">
+                    -
+                </div>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <div class="label">
+                    Contact Number
+                </div>
+
+                <div class="value" id="contact">
+                    -
+                </div>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <div class="label">
+                    Job Experience
+                </div>
+
+                <div class="value" id="experience">
+                    -
+                </div>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <div class="label">
+                    Gender
+                </div>
+
+                <div class="value" id="gender">
+                    -
+                </div>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <div class="label">
+                    Course
+                </div>
+
+                <div class="value" id="course">
+                    -
+                </div>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <div class="label">
+                    Technology
+                </div>
+
+                <div class="value" id="technology">
+                    -
+                </div>
+
+            </div>
+
+
+            <div class="detail-box">
+
+                <div class="label">
+                    Skills
+                </div>
+
+                <div class="value" id="skills">
+                    -
+                </div>
+
+            </div>
+
+
+            <div class="detail-box full">
+
+                <div class="label">
+                    Date & Time
+                </div>
+
+                <div class="value" id="datetime">
+                    -
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- BACK BUTTON -->
+
+        <a href="index.html" class="back-btn">
+            ← Back to Form
+        </a>
+
+
+    </div>
+
+
+    <script>
+
+        // Get data from URL
+
+        const params = new URLSearchParams(
+            window.location.search
+        );
+
+
+        // Display data
+
+        document.getElementById("firstname").textContent =
+            params.get("firstname") || "-";
+
+
+        document.getElementById("lastname").textContent =
+            params.get("lastname") || "-";
+
+
+        document.getElementById("username").textContent =
+            params.get("username") || "-";
+
+
+        document.getElementById("email").textContent =
+            params.get("email") || "-";
+
+
+        document.getElementById("contact").textContent =
+            params.get("contact") || "-";
+
+
+        document.getElementById("experience").textContent =
+            params.get("experience") || "-";
+
+
+        document.getElementById("gender").textContent =
+            params.get("gender") || "-";
+
+
+        document.getElementById("course").textContent =
+            params.get("course") || "-";
+
+
+        document.getElementById("technology").textContent =
+            params.get("technology") || "-";
+
+
+        document.getElementById("skills").textContent =
+            params.getAll("skills").join(", ") || "-";
+
+
+        document.getElementById("datetime").textContent =
+            params.get("datetime") || "-";
+
+    </script>
+
+
+</body>
+
+</html
